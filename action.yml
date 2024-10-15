@@ -1,0 +1,27 @@
+name: 'Setup the Hyphen CLI'
+description: 'Download, install, and authenticate the Hyphen CLI.'
+author: 'Hyphen AI, inc'
+
+# Add your action's branding here. This will appear on the GitHub Marketplace.
+branding:
+  icon: 'terminal'
+  color: 'orange'
+
+# Define your inputs here.
+inputs:
+  apiKey:
+    description: 'Your Hyphen AI API Key'
+    required: true
+  version:
+    description: 'Optional version to pull'
+    required: false
+  hyphen-dev:
+    default: 'false'
+    description: 'optional flag to use the dev environment'
+    deprecationMessage:
+      'This is for internal testing purposes only and should not be used.'
+    required: false
+
+runs:
+  using: node20
+  main: dist/index.js
