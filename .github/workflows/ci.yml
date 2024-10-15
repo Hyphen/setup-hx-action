@@ -46,6 +46,7 @@ jobs:
 
   integration-tests:
     name: Integration Tests
+    if: github.secret_source != 'None'
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
