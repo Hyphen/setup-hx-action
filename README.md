@@ -27,8 +27,8 @@ steps:
     uses: actions/checkout@v4
 
   - name: Setup Hyphen CLI
-    id: test-action
-    uses: hyphen/setup-hyphen-cli@v1
+    id: setup-hx
+    uses: Hyphen/setup-hx-action@v1
     with:
       apiKey: ${{ secrets.HYPHEN_API_KEY }}
       version: 0.10.1 # Leaving this off will default to latest
