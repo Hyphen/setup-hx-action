@@ -1,16 +1,16 @@
 {
-  "name": "typescript-action",
-  "description": "GitHub Actions TypeScript template",
-  "version": "0.0.0",
-  "author": "",
+  "name": "setup-hx-action",
+  "description": "Download, install, and authenticate the Hyphen CLI.",
+  "version": "1.0.0",
+  "author": "Hyphen AI, inc",
   "private": true,
-  "homepage": "https://github.com/actions/typescript-action",
+  "homepage": "https://github.com/Hyphen/setup-hx-action",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/Hyphen/setup-hx-action.git"
   },
   "bugs": {
-    "url": "https://github.com/actions/typescript-action/issues"
+    "url": "https://github.com/Hyphen/setup-hx-action/issues"
   },
   "keywords": [
     "actions",
