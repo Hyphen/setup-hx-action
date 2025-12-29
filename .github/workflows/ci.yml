@@ -61,6 +61,7 @@ jobs:
         with:
           apiKey: ${{ secrets.API_KEY }}
           hyphen-dev: true
+          verbose: true
       - name: List Project
         id: list-project
         run: hx project list
