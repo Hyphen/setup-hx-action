@@ -28581,7 +28581,7 @@ async function run() {
             core.exportVariable('HYPHEN_DEV', 'true');
         }
         // Authenticate with the CLI
-        var command = `hx auth --set-api-key ${apiKey}`;
+        let command = `hx auth --set-api-key ${apiKey}`;
         if (verbose) {
             command += ' --verbose';
         }
