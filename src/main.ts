@@ -14,6 +14,7 @@ import path from 'path';
 export async function run(): Promise<void> {
   try {
     const apiKey: string = core.getInput('apiKey');
+    const verbose: boolean = core.getBooleanInput('verbose');
     const toolName = getCLIName();
 
     // Get the version to download
@@ -42,7 +43,11 @@ export async function run(): Promise<void> {
     }
 
     // Authenticate with the CLI
-    await exec(`hx auth --set-api-key ${apiKey}`);
+    var command = `hx auth --set-api-key ${apiKey}`;
+    if (verbose) {
+      command += ' --verbose';
+    }
+    await exec(command);
   } catch (error) {
     // Fail the workflow run if an error occurs
     if (error instanceof Error) core.setFailed(error.message);

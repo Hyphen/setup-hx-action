@@ -21,6 +21,10 @@ inputs:
     deprecationMessage:
       'This is for internal testing purposes only and should not be used.'
     required: false
+  verbose:
+    default: 'false'
+    description: 'Enable verbose logging'
+    required: false
 
 runs:
   using: node20
