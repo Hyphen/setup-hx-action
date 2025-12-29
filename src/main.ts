@@ -43,7 +43,7 @@ export async function run(): Promise<void> {
     }
 
     // Authenticate with the CLI
-    var command = `hx auth --set-api-key ${apiKey}`;
+    let command = `hx auth --set-api-key ${apiKey}`;
     if (verbose) {
       command += ' --verbose';
     }
