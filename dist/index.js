@@ -28564,6 +28564,7 @@ const path_1 = __importDefault(__nccwpck_require__(6928));
 async function run() {
     try {
         const apiKey = core.getInput('apiKey');
+        const verbose = core.getBooleanInput('verbose');
         const toolName = (0, getCliName_1.default)();
         // Get the version to download
         const version = await (0, getVersionToDownload_1.default)();
@@ -28580,7 +28581,11 @@ async function run() {
             core.exportVariable('HYPHEN_DEV', 'true');
         }
         // Authenticate with the CLI
-        await (0, exec_1.exec)(`hx auth --set-api-key ${apiKey}`);
+        var command = `hx auth --set-api-key ${apiKey}`;
+        if (verbose) {
+            command += ' --verbose';
+        }
+        await (0, exec_1.exec)(command);
     }
     catch (error) {
         // Fail the workflow run if an error occurs
