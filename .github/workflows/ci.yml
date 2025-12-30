@@ -64,4 +64,4 @@ jobs:
           verbose: true
       - name: List Project
         id: list-project
-        run: hx project list
+        run: hx project list --verbose
